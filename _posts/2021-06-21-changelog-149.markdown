@@ -1,0 +1,81 @@
+---
+layout: post
+title: "IntelliJ Rust Changelog #149"
+date: 2021-06-21 17:00:00 +0300
+---
+
+
+## New Features
+
+* [#7303] Detect `unknown_crate_type` compiler lint
+
+* [#7279] Auto-select WSL based toolchain when opening a project inside WSL FS
+
+* [#7229] FEATURE: Add local macro definitions to `symbol search`. FIX: Fix possible flaky false positives around local macro calls
+
+* [#7217] Extend toolchain path field to have an opportunity to choose a suggested path
+
+* [#7113] Implement Run/Debug as root. The new `Run with root privileges`/`Run with Administrator privileges` option is now available for any Cargo configurations. 
+Current restrictions:
+* Requires `Build` tool window, which is enabled by default via `org.rust.cargo.build.window` option in `Experimental Features`
+* Does not work with `cargo test` configurations
+
+* [#7068] Complete table dependency specifications using crates local index. Note, currently this feature is experimental and can be enabled with `org.rust.crates.local.index` option in `Experimental Features` dialog.
+
+* [#7065] Render `&str` string slices content when debugging using MSVC toolchain on Windows
+
+* [#7003] Add intention to extract dependency specification in a separate table in `Cargo.toml`
+
+* [#6745] Add quick fix to add a parameter to a function from a function call. (by [@Kobzol])
+
+* [#6455] INTERNAL: Introduce initial PSI for Markdown inside Rust doc comments, FEATURE: Improve `Extend selection` and `Shrink selection` actions for Rust doc comments
+
+## Fixes
+
+* [#7337] Fix exception in debugger advertiser in 2021.2 versions of IntelliJ IDEA Ultimate, GoLand and PyCharm Pro
+
+* [#7335] fix `<enter>` typing between braces in doctests
+
+* [#7333] Fix weird highlighting of doctests if [rainbow-brackets](https://plugins.jetbrains.com/plugin/10080-rainbow-brackets) plugin is installed
+
+* [#7315] Fix [Rust REPL](https://plugins.jetbrains.com/plugin/8182-rust/docs/rust-repl-console.html) for latest [evcxr](https://github.com/google/evcxr) version 0.10.0
+
+* [#7301] Fix method duplication issue in completion list
+
+* [#7293] Properly construct external links for [`unions`](https://doc.rust-lang.org/reference/items/unions.html) and [`trait aliases`](https://rust-lang.github.io/rfcs/1733-trait-alias.html)in [quick documentation](https://plugins.jetbrains.com/plugin/8182-rust/docs/rust-code-reference-info.html#quick-docs)
+
+* [#7278] Don't reset project toolchain after project creation
+
+* [#7273] RUN: Fix validation of input file
+
+* [#7229] FEATURE: Add local macro definitions to `symbol search`. FIX: Fix possible flaky false positives around local macro calls
+
+## Internal Improvements
+
+* [#7318] Drop support of 2020.3 IDEs
+
+* [#6455] INTERNAL: Introduce initial PSI for Markdown inside Rust doc comments, FEATURE: Improve `Extend selection` and `Shrink selection` actions for Rust doc comments
+
+Full set of changes can be found [here](https://github.com/intellij-rust/intellij-rust/milestone/57?closed=1)
+
+[@Kobzol]: https://github.com/Kobzol
+
+[#6455]: https://github.com/intellij-rust/intellij-rust/pull/6455
+[#6745]: https://github.com/intellij-rust/intellij-rust/pull/6745
+[#7003]: https://github.com/intellij-rust/intellij-rust/pull/7003
+[#7065]: https://github.com/intellij-rust/intellij-rust/pull/7065
+[#7068]: https://github.com/intellij-rust/intellij-rust/pull/7068
+[#7113]: https://github.com/intellij-rust/intellij-rust/pull/7113
+[#7217]: https://github.com/intellij-rust/intellij-rust/pull/7217
+[#7229]: https://github.com/intellij-rust/intellij-rust/pull/7229
+[#7273]: https://github.com/intellij-rust/intellij-rust/pull/7273
+[#7278]: https://github.com/intellij-rust/intellij-rust/pull/7278
+[#7279]: https://github.com/intellij-rust/intellij-rust/pull/7279
+[#7293]: https://github.com/intellij-rust/intellij-rust/pull/7293
+[#7301]: https://github.com/intellij-rust/intellij-rust/pull/7301
+[#7303]: https://github.com/intellij-rust/intellij-rust/pull/7303
+[#7315]: https://github.com/intellij-rust/intellij-rust/pull/7315
+[#7318]: https://github.com/intellij-rust/intellij-rust/pull/7318
+[#7333]: https://github.com/intellij-rust/intellij-rust/pull/7333
+[#7335]: https://github.com/intellij-rust/intellij-rust/pull/7335
+[#7337]: https://github.com/intellij-rust/intellij-rust/pull/7337
